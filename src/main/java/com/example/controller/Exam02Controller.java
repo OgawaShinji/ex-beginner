@@ -17,14 +17,18 @@ public class Exam02Controller {
 	public String index() {
 		return "ex02/exam02";
 	}
-	@RequestMapping("result")
-	public String result(Integer left,Integer right ) {
+	@RequestMapping("/toresult")
+	public String toResult(Integer left,Integer right ) {
 		
 		session.setAttribute("left", left);
 		session.setAttribute("right", right);
 		session.setAttribute("result", left+right);
 		
-		return "/inputQ1/result";
+		return "ex02/exam02-result";
+	}
+	@RequestMapping("/toresult2")
+	public String toResult2() {
+		return "ex02/exam02-result2";
 	}
 	
 	
