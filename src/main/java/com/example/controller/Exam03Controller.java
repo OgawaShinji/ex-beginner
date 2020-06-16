@@ -17,5 +17,18 @@ public class Exam03Controller {
 	public String index() {
 		return "ex03/exam03";
 	}
+	@RequestMapping("/toresult")
+	public String toResult(Integer firstItem, Integer secondItem, Integer thirdItem) {
+		Integer sumPrice=firstItem+secondItem+thirdItem;
+		
+		double taxDouble=sumPrice*1.1;
+		int taxInt=(int)taxDouble;
+		Integer taxPrice=Integer.valueOf(taxInt);
+		
+		application.setAttribute("sumPrice", sumPrice);
+		application.setAttribute("taxPrice", taxPrice);
+		
+		return "ex03/exam03-result";
+	}
 	
 }
