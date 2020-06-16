@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<span th:text=${session.left}>l</span>
+＋
+<span th:text=${session.right}></span>
+=
+<span th:text=${session.result}></span>
+<a th:href="@{/ex02/toresult2}">next</a>
+</body>
+</html>
