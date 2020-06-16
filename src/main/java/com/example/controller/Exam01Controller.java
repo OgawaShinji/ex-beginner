@@ -11,13 +11,13 @@ public class Exam01Controller {
 	
 	@RequestMapping("")
 	public String index() {
-		return "exam01";
+		return "ex01/exam01";
 	}
 	
-	@RequestMapping("/teresult")
+	@RequestMapping("/toresult")
 	public String toResult(String name,Model model) {
 		model.addAttribute("name", name);
-		return "exam01-result";
+		return "ex01/exam01-result";
 	}
 	
 }
